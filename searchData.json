@@ -1,0 +1,39 @@
+[
+  {
+    "component": "dep-signal",
+    "componentPrimaryName": "Package Info",
+    "templateID": 804401,
+    "entities": [
+      {
+        "word": "express",
+        "sourceID": "express",
+        "collectionName": "NPM_PACKAGES",
+        "collectionType": "HD_PACKAGES",
+        "entityInfo": { "repository_url": "https://github.com/expressjs/express" },
+        "componentName": "dep-signal",
+        "entityType": "PACKAGE",
+        "description": "Fast, unopinionated, minimalist web framework for Node.js",
+        "relevanceScore": 99.8
+      },
+      {
+        "word": "fastify",
+        "sourceID": "fastify",
+        "collectionName": "NPM_PACKAGES",
+        "collectionType": "HD_PACKAGES",
+        "entityInfo": { "repository_url": "https://github.com/fastify/fastify" },
+        "componentName": "dep-signal",
+        "entityType": "PACKAGE",
+        "description": "Fast and low overhead web framework for Node.js",
+        "relevanceScore": 97.3
+      }
+    ],
+    "query": "compare express and fastify",
+    "componentEnabled": true,
+    "keyword": [],
+    "disambiguationType": 1,
+    "time": "2026-10-26T07:38:30.135Z",
+    "queryRegex": "compare( npm)?( packages?)? HD_PACKAGES.NPM_PACKAGES and HD_PACKAGES.NPM_PACKAGES",
+    "componentType": "internal"
+  }
+]
+

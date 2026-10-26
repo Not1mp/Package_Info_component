@@ -1,0 +1,114 @@
+{
+  "title": "NPM Package Query",
+  "description": "Structured intent and package names for npm package details, comparisons, alternatives, and use-case discovery.",
+  "componentScope": {
+    "supportedIntents": [
+      {
+        "intent": "package-details",
+        "description": "Show a package's latest published version, release date, downloads, deprecation status, license, and compatibility metadata.",
+        "example": [
+          "npm express",
+          "latest version of react",
+          "npm @tanstack/react-query"
+        ]
+      },
+      {
+        "intent": "package-comparison",
+        "description": "Compare two or three npm packages using current registry metadata and download activity.",
+        "example": [
+          "compare express and fastify",
+          "compare react, vue, and svelte"
+        ]
+      },
+      {
+        "intent": "package-alternatives",
+        "description": "Find related npm packages using package keywords and npm search results.",
+        "example": [
+          "npm alternatives to moment",
+          "packages similar to request"
+        ]
+      },
+      {
+        "intent": "use-case-discovery",
+        "description": "Search npm for packages suited to a stated JavaScript use case when no package name is supplied.",
+        "example": [
+          "best npm package for date formatting",
+          "library for parsing csv"
+        ]
+      }
+    ]
+  },
+  "schema": {
+    "type": "object",
+    "description": "A natural-language npm package request.",
+    "properties": {
+      "type": {
+        "type": "string",
+        "enum": [
+          "details",
+          "comparison",
+          "alternatives",
+          "recommendations"
+        ],
+        "description": "The user intent for the npm package request."
+      },
+      "filters": {
+        "type": "object",
+        "description": "Package names or a use case extracted from the query.",
+        "properties": {
+          "packages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "One to three npm package names, including scoped names.",
+            "minItems": 1,
+            "maxItems": 3
+          },
+          "package": {
+            "type": "string",
+            "description": "A single npm package name for details or alternatives."
+          },
+          "useCase": {
+            "type": "string",
+            "description": "The task to solve when the query does not name a package."
+          }
+        },
+        "additionalProperties": true
+      },
+      "features": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Requested package facts such as version, downloads, release date, license, TypeScript, ESM, Node.js, or size."
+      },
+      "entities": {
+        "type": "object",
+        "description": "Optional package entity collection for explicit package-name queries.",
+        "properties": {
+          "collections": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "NPM_PACKAGES"
+              ]
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "collections"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "type",
+      "filters",
+      "features"
+    ]
+  }
+}
