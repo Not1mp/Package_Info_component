@@ -15,9 +15,6 @@ export default  {
 			'(npm )?(alternatives?( to| for)|packages? (like|similar to)) HD_PACKAGES.NPM_PACKAGES( npm)?',
 			'(best|recommend) (npm )?(packages?|libraries) for',
 			'(npm )?(packages?|library) for'
-		],
-		fallBackRegex: [
-			'compare( npm)?( packages?)? (?<HD_PACKAGES>.+)'
 		]
 	},
 	client: {
@@ -34,7 +31,8 @@ export default  {
 	info: {
 		description: 'Live npm package details, comparisons, and related package discovery.'
 	},
-	github: '',
-	demovideo: ''
+	github: 'https://github.com/Not1mp/Package_Info_component/tree/main/src',
+	demovideo: 'https://www.youtube.com/watch?v=AJPoEavQ72s'
 }
+
 

@@ -1,5 +1,5 @@
 {
-  "name": "package-info-component",
+  "name": "@aalok1980/projectinfocomponent",
   "version": "1.0.0",
   "source": "src/frontend/index.jsx",
   "main": "dist/frontend/index.modern.js",
