@@ -15,6 +15,9 @@ export default  {
 			'(npm )?(alternatives?( to| for)|packages? (like|similar to)) HD_PACKAGES.NPM_PACKAGES( npm)?',
 			'(best|recommend) (npm )?(packages?|libraries) for',
 			'(npm )?(packages?|library) for'
+		],
+		fallBackRegex: [
+			'compare( npm)?( packages?)? (?<HD_PACKAGES>.+)'
 		]
 	},
 	client: {
@@ -34,3 +37,4 @@ export default  {
 	github: '',
 	demovideo: ''
 }
+
