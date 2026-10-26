@@ -31,7 +31,7 @@ export default  {
 	info: {
 		description: 'Live npm package details, comparisons, and related package discovery.'
 	},
-	github: 'https://github.com/Not1mp/Package_Info_component/tree/main/src',
+	github: 'https://github.com/Not1mp/Package_Info_component',
 	demovideo: 'https://www.youtube.com/watch?v=AJPoEavQ72s'
 }
 
